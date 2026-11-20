@@ -147,7 +147,6 @@ The skyline further down the page follows the demo: the more districts you place
 |---|---|
 | `site/` | The static site: `index.html`, `assets/site.css`, `assets/site.js`, icons, the share image, `404.html`, `robots.txt`, `sitemap.xml` and `_headers`. |
 | `wrangler.jsonc` | Cloudflare Workers static-assets configuration: the six domains, 404 handling, and the account the site belongs to. |
-| `deploy.bat` | One-click deploy on Windows. |
 | `docs/` | Images used in this README. |
 
 ### Preview locally
@@ -172,7 +171,7 @@ You need Node.js and access to the Cloudflare account that owns the domains.
 npx wrangler deploy
 ```
 
-In Windows PowerShell use `npx.cmd wrangler deploy`, or double-click `deploy.bat`. The account is pinned in `wrangler.jsonc`, so Wrangler refuses to deploy anywhere else.
+The account is pinned in `wrangler.jsonc`, so Wrangler refuses to deploy anywhere else.
 
 ## Team
 
