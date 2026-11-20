@@ -1,0 +1,24 @@
+{
+  // Mirrors the Worker as it is configured in the dashboard today (20 Nov 2026):
+  // same name, same six domains, workers.dev and preview URLs left on.
+  "name": "genesisidle",
+  // The account that owns genesisidle.com. With this line Wrangler refuses to
+  // deploy anywhere else, even if it is signed in to a different account.
+  "account_id": "b09699d84520752bfac03bcbbc7b68c0",
+  "compatibility_date": "2026-11-19",
+  "workers_dev": true,
+  "preview_urls": true,
+  "routes": [
+    { "pattern": "genesisidle.com", "custom_domain": true },
+    { "pattern": "www.genesisidle.com", "custom_domain": true },
+    { "pattern": "genesisidle.site", "custom_domain": true },
+    { "pattern": "www.genesisidle.site", "custom_domain": true },
+    { "pattern": "genesisidle.online", "custom_domain": true },
+    { "pattern": "www.genesisidle.online", "custom_domain": true }
+  ],
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
