@@ -1,7 +1,7 @@
 {
   "name": "Genesis Idle",
   "short_name": "Genesis Idle",
-  "description": "An idle city-builder at cosmic scale.",
+  "description": "An idle civilization builder. From a single spark, a civilization.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#04050c",

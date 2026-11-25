@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="docs/banner.jpg" alt="Genesis Idle: a dark blue planet whose city lights are switching on, beside the line 'From a single spark, a civilization.'" width="100%">
+  <img src="docs/banner.jpg" alt="Genesis Idle: a world seen from orbit at sunrise, its night side covered in city lights, beside the line 'From a single spark, a civilization.'" width="100%">
 </p>
 
 # Genesis Idle
 
 **From a single spark, a civilization.**
 
-Genesis Idle is an idle tycoon and city-builder at cosmic scale. You place the first district, leave the game running, and come back to something larger than you left. Behind the game sits a bigger plan: an ecosystem in which play, advertising revenue and on-chain ownership feed one another.
+Genesis Idle is an idle civilization builder for the web and Telegram. You light the Spark Altar on an island of your own, leave the game running, and come back to something larger than you left. Behind the game sits a bigger plan: an ecosystem in which play, advertising revenue and on-chain ownership feed one another.
 
 [Website](https://genesisidle.com)
 
-> **Status:** in development. The website and a small playable demo are live. The game itself has not launched, and everything under [The ecosystem](#the-ecosystem) is a plan, not a released product.
+> **Status:** in development. The website is live. The game itself has not launched, and everything under [The ecosystem](#the-ecosystem) is a plan, not a released product.
 
 ## Contents
 
@@ -32,24 +32,40 @@ You plant. You leave. You return, and find something larger than you left behind
 
 ### The core loop
 
-1. **Place.** Start with a single district on an empty grid.
-2. **Leave it running.** Districts keep producing points on their own. You do not have to keep clicking; the game is designed to sit open and work.
-3. **Return.** Collect what has accumulated and spend it on more districts, energy routes and landmarks.
-4. **Evolve.** Enough growth carries the civilization into its next era, and every new beginning keeps what the last one learned.
-
-### Six eras, one unbroken line
-
-| Era | Name | What happens |
-|---|---|---|
-| I | Spark | A single light in the dark. The first district is placed. |
-| II | Settlement | Roads, power, people. The town learns to run without you. |
-| III | Metropolis | Skylines and landmarks. The city starts to write its own history. |
-| IV | Planet | Cities join into one lit world, visible from orbit. |
-| V | Star System | Moons, stations and trade between worlds. |
-| VI | Galaxy | What began as one spark becomes a spiral of light. |
+1. **Light the altar.** Your island starts with a single building, the Spark Altar. Everything else grows around it.
+2. **Build and let it run.** Houses bring villagers. Woodcutters, quarries and fields keep producing while you are away.
+3. **Return.** Collect what has accumulated and spend it on new buildings and upgrades.
+4. **Raise the core.** The level of the core sets your era. Reach the next one and every building on the island transforms.
 
 <p align="center">
-  <img src="docs/site-eras.jpg" alt="The six eras on one line, from Spark to Galaxy" width="100%">
+  <img src="docs/site-game.jpg" alt="The game section of the website, with an in-game screenshot of an Era II island" width="100%">
+</p>
+
+### Four eras in season one
+
+| Era | Name | Core | What changes |
+|---|---|---|---|
+| I | Village | Spark Altar | Timber, stone and the first houses around the altar. |
+| II | Town | Town Keep, from core level 4 | The altar becomes a keep. Stone mansions, windmills and a busier farm. |
+| III | Metropolis | Metro Tower, from core level 7 | Paved streets, towers and street lights that come on at dusk. |
+| IV | Star Age | Star Base, from core level 10 | Domes, landing pads and a cargo shuttle. |
+
+What comes after the Star Age belongs to later seasons and is not announced yet.
+
+<p align="center">
+  <img src="docs/site-eras.jpg" alt="The four eras, each with an in-game screenshot: Village, Town, Metropolis and Star Age" width="100%">
+</p>
+
+### Island life
+
+Villagers and a day and night cycle, quests and relics, a farm island joined by a bridge, pets and decorations, island costumes, ranks and a leaderboard, other players' islands to visit, a mailbox and gift codes. The game is translated into 50 languages.
+
+### GTP
+
+GTP stands for Genesis Testnet Point. It is an in-game point with no monetary value. It comes only from rewarded ads a player chooses to watch, in the Telegram version of the game, and it does not buy a production advantage.
+
+<p align="center">
+  <img src="docs/site-gtp.jpg" alt="The GTP section of the website with the coin: a sun rising over the night side of a world" width="100%">
 </p>
 
 ## The ecosystem
@@ -97,7 +113,6 @@ Nothing in this repository is financial advice or an offer of any kind. The rewa
 | Stage | State |
 |---|---|
 | Website | Live |
-| Playable demo on the website | Live |
 | The game | In development |
 | Seasons and season-end rewards | Planned |
 | Advertising revenue loop | Planned |
@@ -113,27 +128,13 @@ This repository holds the site at [genesisidle.com](https://genesisidle.com), ex
   <img src="docs/site-hero.jpg" alt="The top of the Genesis Idle website" width="100%">
 </p>
 
-### A demo you can play
-
-The "Try it" section is a small working piece of the game. Place districts with the button, by clicking the grid, or with the arrow keys and Enter. The numbers climb on their own. Progress is saved in your browser, and when you come back the page tells you how much the city grew while you were away. Fill all 24 districts and Era II unlocks.
-
-<p align="center">
-  <img src="docs/site-demo.jpg" alt="The playable demo: eleven of twenty-four districts placed, population and light per second climbing" width="100%">
-</p>
-
-The skyline further down the page follows the demo: the more districts you place, the more windows are lit.
-
-<p align="center">
-  <img src="docs/site-skyline.jpg" alt="A city skyline under a pale sun with the heading 'Watch it rise.'" width="100%">
-</p>
-
 ### How it is built
 
 - **No framework and no build step.** One HTML page, one stylesheet, one script.
-- **Fast.** The starfield is drawn on a single canvas, and decorative animation pauses when it is off screen.
-- **Works on a phone.** One-row header with a menu panel; the six eras run down one vertical line on narrow screens.
-- **Keyboard and screen-reader friendly.** Skip link, visible focus, a district grid you can drive with arrow keys, live announcements at milestones.
-- **Respects reduced motion.** With that system setting on, nothing loops and nothing is hidden.
+- **Fast.** Backgrounds are pre-rendered images in two sizes, images below the fold load lazily, and decorative animation pauses when it is off screen.
+- **Works on a phone.** One-row header with a menu panel; cards fall to two columns and then one on narrow screens.
+- **Keyboard and screen-reader friendly.** Skip link, visible focus, and text alternatives for every picture that carries meaning.
+- **Respects reduced motion.** With that system setting on, nothing loops, the coin is a still image, and nothing is hidden.
 - **Locked down.** A strict Content-Security-Policy with no inline scripts or styles, plus HSTS and related headers.
 - **Search and sharing.** Canonical URL, Open Graph and Twitter cards, structured data, sitemap, and a real 404 page.
 
@@ -145,7 +146,7 @@ The skyline further down the page follows the demo: the more districts you place
 
 | Path | What it is |
 |---|---|
-| `site/` | The static site: `index.html`, `assets/site.css`, `assets/site.js`, icons, the share image, `404.html`, `robots.txt`, `sitemap.xml` and `_headers`. |
+| `site/` | The static site: `index.html`, `assets/site.css`, `assets/site.js`, backgrounds, game screenshots and the coin under `assets/`, icons, the share image, `404.html`, `robots.txt`, `sitemap.xml` and `_headers`. |
 | `wrangler.jsonc` | Cloudflare Workers static-assets configuration: the six domains, 404 handling, and the account the site belongs to. |
 | `docs/` | Images used in this README. |
 

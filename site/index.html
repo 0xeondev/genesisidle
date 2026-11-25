@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Genesis Idle — From a single spark, a civilization</title>
-<meta name="description" content="An idle city-builder at cosmic scale. From a single spark, a civilization. Coming soon.">
+<meta name="description" content="Light the Spark Altar on an island of your own and grow it from a village to a star base. An idle civilization builder for the web and Telegram. Coming soon.">
 <meta name="theme-color" content="#04050c">
 <link rel="canonical" href="https://genesisidle.com/">
 
@@ -12,30 +12,31 @@
 <meta property="og:site_name" content="Genesis Idle">
 <meta property="og:url" content="https://genesisidle.com/">
 <meta property="og:title" content="Genesis Idle — From a single spark, a civilization">
-<meta property="og:description" content="An idle city-builder at cosmic scale. Place the first district, let time do the rest.">
+<meta property="og:description" content="Light the Spark Altar on an island of your own and grow it from a village to a star base. Coming soon to the web and Telegram.">
 <meta property="og:image" content="https://genesisidle.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A dark blue planet whose city lights are switching on, one by one.">
+<meta property="og:image:alt" content="A world seen from orbit at sunrise, its night side covered in city lights.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Genesis Idle — From a single spark, a civilization">
-<meta name="twitter:description" content="An idle city-builder at cosmic scale. Place the first district, let time do the rest.">
+<meta name="twitter:description" content="Light the Spark Altar on an island of your own and grow it from a village to a star base. Coming soon to the web and Telegram.">
 <meta name="twitter:image" content="https://genesisidle.com/og.png">
 
 <link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&amp;family=Space+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="preload" as="image" type="image/webp" href="/assets/bg/hero-1440.webp" imagesrcset="/assets/bg/hero-1440.webp 1440w, /assets/bg/hero-2560.webp 2560w" imagesizes="100vw" media="(min-width: 900px)">
+<link rel="preload" as="image" type="image/webp" href="/assets/bg/hero-m-720.webp" imagesrcset="/assets/bg/hero-m-720.webp 720w, /assets/bg/hero-m-1200.webp 1200w" imagesizes="100vw" media="(max-width: 899px)">
 <link rel="stylesheet" href="/assets/site.css">
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://genesisidle.com/#org","name":"Genesis Idle","url":"https://genesisidle.com/","logo":"https://genesisidle.com/icon-512.png"},
-{"@type":"VideoGame","@id":"https://genesisidle.com/#game","name":"Genesis Idle","url":"https://genesisidle.com/","description":"An idle city-builder at cosmic scale. From a single spark, a civilization.","genre":["Idle game","City-building game"],"image":"https://genesisidle.com/og.png","publisher":{"@id":"https://genesisidle.com/#org"}}
+{"@type":"VideoGame","@id":"https://genesisidle.com/#game","name":"Genesis Idle","url":"https://genesisidle.com/","description":"An idle civilization builder. Light the Spark Altar on an island of your own and grow it from a village to a star base.","genre":["Idle game","City-building game"],"image":"https://genesisidle.com/og.png","publisher":{"@id":"https://genesisidle.com/#org"}}
 ]}
 </script>
 <script src="/assets/site.js" defer></script>
@@ -45,19 +46,13 @@
 <div class="gi-page" id="top">
 
 <div class="gi-sky" aria-hidden="true">
-  <span class="gi-nebula gi-nebula--a"></span>
-  <span class="gi-nebula gi-nebula--b"></span>
-  <span class="gi-nebula gi-nebula--c"></span>
-  <canvas class="gi-stars"></canvas>
-  <span class="gi-shoot gi-shoot--a"></span>
-  <span class="gi-shoot gi-shoot--b"></span>
-  <span class="gi-shoot gi-shoot--c"></span>
+  <img class="gi-sky-img" src="/assets/bg/sky-1280.webp" srcset="/assets/bg/sky-1280.webp 1280w, /assets/bg/sky-2560.webp 2560w" sizes="100vw" width="2560" height="1600" alt="" decoding="async">
 </div>
 
 <header class="gi-header">
   <div class="gi-header-in">
     <a class="gi-brand" href="#top">
-      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="#8b7bff" stroke-width="1" opacity="0.7"></circle><circle cx="17" cy="17" r="9" fill="none" stroke="#5ce1ff" stroke-width="1" opacity="0.5"></circle><circle cx="17" cy="17" r="3.2" fill="#ffcc7a"></circle></svg>
+      <img src="/assets/coin/gtp-coin-96.png" width="34" height="34" alt="">
       <span class="gi-brand-name">GENESIS IDLE</span>
     </a>
     <nav class="gi-nav" aria-label="Main">
@@ -66,13 +61,13 @@
         <svg class="gi-x" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"></path></svg>
       </button>
       <ul class="gi-nav-links" id="gi-menu">
-        <li><a href="#story">Story</a></li>
-        <li><a href="#play">Try it</a></li>
+        <li><a href="#game">The game</a></li>
         <li><a href="#eras">Eras</a></li>
-        <li><a href="#ownership">Ownership</a></li>
+        <li><a href="#life">Island life</a></li>
+        <li><a href="#gtp">GTP</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a class="gi-btn gi-btn--ghost gi-btn--sm gi-nav-cta" href="#join">Coming soon</a>
+      <span class="gi-soon gi-soon--sm gi-nav-cta">Coming soon</span>
     </nav>
   </div>
 </header>
@@ -80,148 +75,113 @@
 <main class="gi-main" id="main">
 
 <section class="gi-hero">
+  <div class="gi-hero-bg" aria-hidden="true">
+    <div class="gi-scene">
+      <picture>
+        <source media="(max-width: 899px)" srcset="/assets/bg/hero-m-720.webp 720w, /assets/bg/hero-m-1200.webp 1200w" sizes="100vw" width="1200" height="1800">
+        <img class="gi-scene-img" src="/assets/bg/hero-1440.webp" srcset="/assets/bg/hero-1440.webp 1440w, /assets/bg/hero-2560.webp 2560w" sizes="100vw" width="2560" height="1600" alt="" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="gi-lights gi-lights--d" id="gi-lights" data-pause></div>
+      <div class="gi-lights gi-lights--m" id="gi-lights-m" data-pause></div>
+    </div>
+    <span class="gi-hero-scrim"></span>
+  </div>
   <div class="gi-hero-copy">
-    <p class="gi-eyebrow">An idle city-builder at cosmic scale</p>
-    <h1 class="gi-h1">From a single spark, a civilization.</h1>
-    <p class="gi-hero-lead">Genesis Idle begins with one point of light. Place the first district, let time do the rest, and watch a settlement become a world, a star system, a galaxy.</p>
+    <p class="gi-eyebrow">An idle civilization builder</p>
+    <h1 class="gi-h1">From a single spark, a&nbsp;civilization.</h1>
+    <p class="gi-hero-lead">Light the Spark Altar on an island of your own. Build a village, let it run while you are away, and come back to a town, a metropolis, a star base.</p>
     <div class="gi-hero-actions">
-      <a class="gi-btn gi-btn--primary" href="#play">Light the first spark</a>
-      <a class="gi-link" href="#story">Read the story <span aria-hidden="true">→</span></a>
+      <span class="gi-soon">Coming soon</span>
+      <a class="gi-link" href="#game">See how it plays <span aria-hidden="true">↓</span></a>
     </div>
-    <div class="gi-readout">
-      <div><span class="gi-k">Era</span><span class="gi-v">I · Spark</span></div>
-      <div><span class="gi-k">Population</span><span class="gi-v is-amber" data-v="popText">—</span></div>
-      <div><span class="gi-k">Light / s</span><span class="gi-v is-cyan" data-v="rateText">—</span></div>
-    </div>
-  </div>
-  <div class="gi-planet-wrap">
-    <div class="gi-planet" data-pause>
-      <div class="gi-halo" aria-hidden="true"></div>
-      <div class="gi-spark" aria-hidden="true"></div>
-      <div class="gi-float">
-        <div class="gi-ring gi-ring--a" aria-hidden="true"><div class="gi-ring-line"></div><div class="gi-orbit gi-orbit--a"><span class="gi-moon"></span></div></div>
-        <div class="gi-ring gi-ring--b" aria-hidden="true"><div class="gi-ring-line"></div><div class="gi-orbit gi-orbit--b"><span class="gi-probe"></span></div></div>
-        <svg class="gi-routes" aria-hidden="true" viewBox="0 0 600 600"><path class="gi-route" d="M380 270 Q 520 160 560 120" stroke="#ffcc7a" stroke-width="1.5" fill="none" opacity="0.8"></path><path class="gi-route gi-route--b" d="M220 360 Q 90 450 40 500" stroke="#7fe6ff" stroke-width="1.5" fill="none" opacity="0.7"></path><path class="gi-route gi-route--c" d="M330 410 Q 420 520 470 560" stroke="#b9adff" stroke-width="1.2" fill="none" opacity="0.6"></path><rect x="552" y="112" width="14" height="14" fill="none" stroke="#ffcc7a" stroke-width="1.5" transform="rotate(45 559 119)"></rect><rect x="33" y="493" width="14" height="14" fill="none" stroke="#7fe6ff" stroke-width="1.5" transform="rotate(45 40 500)"></rect><circle cx="470" cy="560" r="6" fill="none" stroke="#b9adff" stroke-width="1.5"></circle></svg>
-        <div class="gi-globe" role="img" aria-label="A planet whose city lights switch on one by one">
-          <div class="gi-band" aria-hidden="true"></div>
-          <div class="gi-shade" aria-hidden="true"></div>
-          <div class="gi-lights" id="gi-lights" aria-hidden="true"></div>
-          <div class="gi-rim" aria-hidden="true"></div>
-        </div>
-      </div>
-    </div>
+    <ul class="gi-facts">
+      <li><strong>4 eras</strong><span>in season one</span></li>
+      <li><strong>50 languages</strong><span>in the game</span></li>
+      <li><strong>Web + Telegram</strong><span>computer and phone</span></li>
+    </ul>
   </div>
 </section>
 
-<section class="gi-story" id="story">
-  <span class="gi-thread" aria-hidden="true"></span>
-  <p class="gi-eyebrow gi-eyebrow--muted gi-reveal">The idea</p>
-  <h2 class="gi-story-h gi-reveal">Every civilization is a long conversation between patience and light.</h2>
-  <p class="gi-story-p gi-reveal">Idle games are about time. So are civilizations. Genesis Idle is built on one quiet idea: small decisions, given enough time, become worlds.</p>
-  <p class="gi-story-line gi-reveal">You plant. You leave. You return — <span class="is-amber">and find something larger than you left behind.</span></p>
-</section>
-
-<section class="gi-section" id="play">
-  <div class="gi-play gi-reveal">
-    <div class="gi-play-copy">
-      <p class="gi-eyebrow">Try it</p>
-      <h2 class="gi-play-h">Light the first spark.</h2>
-      <p class="gi-play-p">Every district you place keeps working when you stop. Place one, then just watch the numbers climb.</p>
-      <div class="gi-away" id="gi-away" role="status" hidden>
-        <span id="gi-away-text"></span>
-        <button class="gi-link-btn" id="gi-away-dismiss" type="button">Dismiss</button>
-      </div>
-      <div class="gi-stats">
-        <div><span class="gi-k">Districts</span><span class="gi-v"><span data-v="districts">—</span><small> / 24</small></span></div>
-        <div><span class="gi-k">Population</span><span class="gi-v is-amber" data-v="popText">—</span></div>
-        <div><span class="gi-k">Light / s</span><span class="gi-v is-cyan" data-v="rateText">—</span></div>
-      </div>
-      <div class="gi-play-actions">
-        <button class="gi-btn gi-btn--primary" id="gi-place" type="button">Place a district</button>
-        <span class="gi-note" id="gi-note" role="status"></span>
-      </div>
-      <div class="gi-complete" id="gi-complete" hidden>
-        <p class="gi-eyebrow">Era II unlocked</p>
-        <h3 class="gi-h3" id="gi-complete-title" tabindex="-1">The settlement is complete.</h3>
-        <p class="gi-complete-p">Roads, power, people. The town learns to run without you.</p>
-        <div><button class="gi-link-btn" type="button" data-demo-reset>Start over</button></div>
-      </div>
-      <p class="gi-sr" id="gi-live" role="status" aria-live="polite"></p>
-    </div>
-    <div class="gi-play-board">
-      <div class="gi-tiles" id="gi-tiles" role="group" aria-label="District grid. Use the arrow keys to move, Enter to place a district."></div>
-    </div>
-  </div>
-</section>
-
-<section class="gi-skyline" aria-label="A city rising">
-  <div class="gi-skyline-glow" aria-hidden="true"></div>
-  <div class="gi-sun" aria-hidden="true"></div>
-  <div class="gi-skyline-copy gi-reveal">
-    <h2 class="gi-skyline-h">Watch it rise.</h2>
-    <p class="gi-skyline-p">Every window is a choice you made a while ago.</p>
-  </div>
-  <div class="gi-buildings" id="gi-buildings" aria-hidden="true"></div>
-</section>
-
-<section class="gi-section" id="eras">
+<section class="gi-section" id="game">
   <div class="gi-section-head gi-reveal">
-    <p class="gi-eyebrow">The path</p>
-    <h2 class="gi-h2">Six ages, one unbroken line.</h2>
+    <p class="gi-eyebrow">The game</p>
+    <h2 class="gi-h2">Build it, leave it, come back to more.</h2>
   </div>
-  <div class="gi-eras-wrap">
-    <div class="gi-eras-track" aria-hidden="true"></div>
-    <div class="gi-eras-fill" aria-hidden="true"></div>
+  <ol class="gi-steps">
+    <li class="gi-step gi-reveal"><h3 class="gi-h3">Light the altar</h3><p>Your island starts with a single building: the Spark Altar, the heart of your civilization. Everything else grows around it.</p></li>
+    <li class="gi-step gi-reveal"><h3 class="gi-h3">Build and let it run</h3><p>Houses bring villagers. Woodcutters, quarries and fields keep producing while you are away; come back, collect, and upgrade.</p></li>
+    <li class="gi-step gi-reveal"><h3 class="gi-h3">Raise the core</h3><p>The level of your core sets your era. Reach the next one and every building on the island transforms.</p></li>
+  </ol>
+  <figure class="gi-shot gi-reveal">
+    <img src="/assets/game/island-1120.webp" srcset="/assets/game/island-1120.webp 1120w, /assets/game/island-1920.webp 1920w" sizes="(max-width: 1240px) 100vw, 1176px" width="1920" height="1080" alt="A floating island in Era II: a keep at the centre, houses, mills and fields around it, and a farm island joined by a wooden bridge. Resource counters and the build menu frame the view." loading="lazy" decoding="async">
+    <figcaption>In-game screenshot · Era II · development build</figcaption>
+  </figure>
+
+</section>
+
+<div class="gi-eras-band">
+  <img class="gi-eras-bg" src="/assets/bg/dusk-1280.webp" srcset="/assets/bg/dusk-1280.webp 1280w, /assets/bg/dusk-2560.webp 2560w" sizes="100vw" width="2560" height="1100" alt="" aria-hidden="true" loading="lazy" decoding="async">
+  <section class="gi-section" id="eras">
+    <div class="gi-section-head gi-reveal">
+      <p class="gi-eyebrow">Season one</p>
+      <h2 class="gi-h2">Four eras, one island.</h2>
+    </div>
     <ol class="gi-eras">
-      <li class="gi-era gi-era--1"><span class="gi-era-icon" aria-hidden="true"><i></i></span><div class="gi-era-text"><span class="gi-era-num">I</span><h3 class="gi-era-name">Spark</h3><p class="gi-era-p">A single light in the dark. The first district is placed.</p></div></li>
-      <li class="gi-era gi-era--2"><span class="gi-era-icon" aria-hidden="true"><i></i></span><div class="gi-era-text"><span class="gi-era-num">II</span><h3 class="gi-era-name">Settlement</h3><p class="gi-era-p">Roads, power, people. The town learns to run without you.</p></div></li>
-      <li class="gi-era gi-era--3"><span class="gi-era-icon" aria-hidden="true"><i></i></span><div class="gi-era-text"><span class="gi-era-num">III</span><h3 class="gi-era-name">Metropolis</h3><p class="gi-era-p">Skylines and landmarks. The city starts to write its own history.</p></div></li>
-      <li class="gi-era gi-era--4"><span class="gi-era-icon" aria-hidden="true"><i></i></span><div class="gi-era-text"><span class="gi-era-num">IV</span><h3 class="gi-era-name">Planet</h3><p class="gi-era-p">Cities join into one lit world, visible from orbit.</p></div></li>
-      <li class="gi-era gi-era--5"><span class="gi-era-icon" aria-hidden="true"><i></i></span><div class="gi-era-text"><span class="gi-era-num">V</span><h3 class="gi-era-name">Star System</h3><p class="gi-era-p">Moons, stations and trade between worlds.</p></div></li>
-      <li class="gi-era gi-era--6"><span class="gi-era-icon" aria-hidden="true"><i></i></span><div class="gi-era-text"><span class="gi-era-num">VI</span><h3 class="gi-era-name">Galaxy</h3><p class="gi-era-p">What began as one spark becomes a spiral of light.</p></div></li>
+      <li class="gi-era gi-reveal">
+        <img src="/assets/game/era-1-520.webp" srcset="/assets/game/era-1-520.webp 520w, /assets/game/era-1-920.webp 920w" sizes="(max-width: 599px) 100vw, (max-width: 1099px) 50vw, 290px" width="920" height="680" alt="A small green island with red-roofed cottages, a barn and fields around a stone altar." loading="lazy" decoding="async">
+        <div class="gi-era-body"><span class="gi-era-num">ERA I</span><h3 class="gi-era-name">Village</h3><span class="gi-era-core">Core: Spark Altar</span><p>Timber, stone and the first houses around the altar.</p></div>
+      </li>
+      <li class="gi-era gi-reveal">
+        <img src="/assets/game/era-2-520.webp" srcset="/assets/game/era-2-520.webp 520w, /assets/game/era-2-920.webp 920w" sizes="(max-width: 599px) 100vw, (max-width: 1099px) 50vw, 290px" width="920" height="680" alt="A larger island with a keep at its centre, stone houses, windmills and barns." loading="lazy" decoding="async">
+        <div class="gi-era-body"><span class="gi-era-num">ERA II</span><h3 class="gi-era-name">Town</h3><span class="gi-era-core">Core: Town Keep · from core level 4</span><p>The altar becomes a keep. Stone mansions, windmills and a busier farm.</p></div>
+      </li>
+      <li class="gi-era gi-reveal">
+        <img src="/assets/game/era-3-520.webp" srcset="/assets/game/era-3-520.webp 520w, /assets/game/era-3-920.webp 920w" sizes="(max-width: 599px) 100vw, (max-width: 1099px) 50vw, 290px" width="920" height="680" alt="A paved island at dusk with office towers, apartment blocks and lit street lamps." loading="lazy" decoding="async">
+        <div class="gi-era-body"><span class="gi-era-num">ERA III</span><h3 class="gi-era-name">Metropolis</h3><span class="gi-era-core">Core: Metro Tower · from core level 7</span><p>Paved streets, towers and street lights that come on at dusk.</p></div>
+      </li>
+      <li class="gi-era gi-reveal">
+        <img src="/assets/game/era-4-520.webp" srcset="/assets/game/era-4-520.webp 520w, /assets/game/era-4-920.webp 920w" sizes="(max-width: 599px) 100vw, (max-width: 1099px) 50vw, 290px" width="920" height="680" alt="A metal-decked island with domes, solar arrays and landing pads around a white beacon." loading="lazy" decoding="async">
+        <div class="gi-era-body"><span class="gi-era-num">ERA IV</span><h3 class="gi-era-name">Star Age</h3><span class="gi-era-core">Core: Star Base · from core level 10</span><p>Domes, landing pads and a cargo shuttle. The island looks up.</p></div>
+      </li>
     </ol>
+    <p class="gi-after gi-reveal">Each new era changes how every building looks, and the island grows with it. The pictures are in-game screenshots from a development build. What comes after the Star Age belongs to later seasons and is not announced yet.</p>
+  </section>
+</div>
+
+<section class="gi-section" id="life">
+  <div class="gi-section-head gi-reveal">
+    <p class="gi-eyebrow">Island life</p>
+    <h2 class="gi-h2">More than numbers going up.</h2>
   </div>
+  <ul class="gi-life">
+    <li class="gi-reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/></svg><h3>Villagers and a day that turns</h3><p>Every house adds a villager. They work, sit on the benches you place, and the lamps come on when night falls.</p></li>
+    <li class="gi-reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6-5.3-3-5.3 3 1.2-6L3.4 9.3l6-.7z"/></svg><h3>Quests and relics</h3><p>Daily, weekly and monthly quests to finish, and relics to find and equip.</p></li>
+    <li class="gi-reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="M5 20v-8l7-5 7 5v8"/><path d="M10 20v-5h4v5"/></svg><h3>A farm island</h3><p>A second island for your animals, joined by a bridge. Upgrade it to make room for new ones.</p></li>
+    <li class="gi-reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.3-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.7-7 10-7 10z"/></svg><h3>Pets, benches and lights</h3><p>Pets to adopt, and decorations you can place, turn and move.</p></li>
+    <li class="gi-reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l5-14 3 6 3-6 5 14z"/></svg><h3>A look for every era</h3><p>Costumes change how your whole island looks, from the first village to the Star Age.</p></li>
+    <li class="gi-reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 5h12l-2.5 3.5L17 12H5"/></svg><h3>Ranks and a leaderboard</h3><p>Rank comes from developing your island. Climb the leaderboard and plant a language flag on your shore.</p></li>
+    <li class="gi-reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3.2 3 14.8 0 18c-3-3.2-3-14.8 0-18z"/></svg><h3>Islands to visit</h3><p>Tour the islands of players on the leaderboard, and wake the Echo Isles drifting around your own.</p></li>
+    <li class="gi-reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3.5 7.5L12 13l8.5-5.5"/></svg><h3>A mailbox and gift codes</h3><p>A mailbox for letters and gifts, and codes that unlock in-game presents.</p></li>
+  </ul>
 </section>
 
-<section class="gi-section" id="ownership">
-  <div class="gi-section-head gi-reveal">
-    <p class="gi-eyebrow">How it plays</p>
-    <h2 class="gi-h2">Build. Evolve. Own what you leave behind.</h2>
-  </div>
-  <div class="gi-cards">
-    <article class="gi-card gi-reveal">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#ffcc7a" stroke-width="1.5" aria-hidden="true"><rect x="6" y="18" width="8" height="16"></rect><rect x="16" y="8" width="8" height="26"></rect><rect x="26" y="14" width="8" height="20"></rect><path d="M4 34h32"></path></svg>
-      <h3 class="gi-h3">Build</h3>
-      <p class="gi-card-p">Zone districts, route energy, raise landmarks. Your city keeps growing while you’re away.</p>
-    </article>
-    <article class="gi-card gi-reveal">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#8b7bff" stroke-width="1.5" aria-hidden="true"><circle cx="20" cy="20" r="4"></circle><circle cx="20" cy="20" r="10"></circle><circle cx="20" cy="20" r="16"></circle><circle cx="30" cy="10.5" r="2" fill="#8b7bff"></circle></svg>
-      <h3 class="gi-h3">Evolve</h3>
-      <p class="gi-card-p">Advance through cosmic eras. Every new beginning carries forward what your civilization learned.</p>
-    </article>
-    <article class="gi-card gi-reveal">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#7fe6ff" stroke-width="1.5" aria-hidden="true"><rect x="9" y="4" width="22" height="32" rx="3"></rect><circle cx="20" cy="18" r="5"></circle><path d="M14 29h12"></path></svg>
-      <h3 class="gi-h3">Own</h3>
-      <p class="gi-card-p">Districts, landmarks and relics you create can live on-chain — yours to keep, trade or pass on.</p>
-    </article>
-  </div>
-  <div class="gi-own gi-reveal">
-    <div class="gi-relic-stage" data-pause aria-hidden="true">
-      <div class="gi-relic">
-        <div class="gi-relic-frame"></div>
-        <div class="gi-relic-orb"></div>
-        <div class="gi-relic-ring"></div>
-        <div class="gi-relic-tag">RELIC · ERA IV</div>
-        <div class="gi-holo"></div>
-      </div>
+<section class="gi-section" id="gtp">
+  <div class="gi-gtp gi-reveal">
+    <div class="gi-gtp-coin">
+      <picture>
+        <source media="(prefers-reduced-motion: reduce)" srcset="/assets/coin/gtp-coin-still.webp">
+        <img src="/assets/coin/gtp-coin.webp" width="400" height="400" alt="The GTP coin: a sun rising over the night side of a world, under a field of stars." loading="lazy" decoding="async">
+      </picture>
     </div>
-    <div class="gi-own-copy">
-      <h3 class="gi-h3">What ownership means here</h3>
-      <ul class="gi-own-list">
-        <li><strong>What you make is yours.</strong> Districts, landmarks and relics you create can live on-chain.</li>
-        <li><strong>Keep it, trade it or pass it on.</strong> That choice stays with you.</li>
-        <li><strong>It is part of the game, not a promise of profit.</strong> Nothing on this site is financial advice.</li>
+    <div class="gi-gtp-copy">
+      <p class="gi-eyebrow">GTP</p>
+      <h2 class="gi-h2">Genesis Testnet Point.</h2>
+      <ul class="gi-gtp-list">
+        <li><strong>It is an in-game point.</strong> GTP has no monetary value. It is not a token and it is not for sale.</li>
+        <li><strong>It comes only from rewarded ads</strong> you choose to watch, in the Telegram version of the game.</li>
+        <li><strong>It does not buy a lead.</strong> Rank comes from developing your island; badges, costumes, pets and decorations change how things look, not how fast you produce.</li>
       </ul>
+      <p class="gi-small">Nothing on this site is financial advice.</p>
     </div>
   </div>
 </section>
@@ -229,26 +189,24 @@
 <section class="gi-section" id="faq">
   <div class="gi-section-head gi-reveal">
     <p class="gi-eyebrow">FAQ</p>
-    <h2 class="gi-h2">Questions, briefly.</h2>
+    <h2 class="gi-h2">Questions, answered plainly.</h2>
   </div>
   <div class="gi-faq">
-    <details>
-      <summary>When does Genesis Idle launch?</summary>
-      <p class="gi-faq-a">There is no date yet.</p>
-    </details>
-    <details>
-      <summary>Will my demo progress carry over?</summary>
-      <p class="gi-faq-a">The demo saves in this browser only; nothing is sent anywhere.</p>
-    </details>
+    <details><summary>When can I play?</summary><p class="gi-faq-a">There is no date yet. The game is in development for the web and for Telegram.</p></details>
+    <details><summary>Do I have to keep it open?</summary><p class="gi-faq-a">No. Your island keeps producing while you are away, until its storage is full. Come back, collect, and build on.</p></details>
+    <details><summary>Is GTP a cryptocurrency?</summary><p class="gi-faq-a">No. GTP stands for Genesis Testnet Point. It is an in-game point with no monetary value.</p></details>
+    <details><summary>Where does it run?</summary><p class="gi-faq-a">In a web browser and inside Telegram, on computers and phones.</p></details>
+    <details><summary>Which languages?</summary><p class="gi-faq-a">The game is translated into 50 languages. This site is in English for now.</p></details>
   </div>
 </section>
 
-<section class="gi-section" id="join">
+<section class="gi-section gi-section--join" id="join">
   <div class="gi-join gi-reveal">
-    <div class="gi-join-galaxy" data-pause aria-hidden="true"></div>
+    <img class="gi-join-galaxy" src="/assets/bg/galaxy-1000.webp" srcset="/assets/bg/galaxy-1000.webp 1000w, /assets/bg/galaxy-1800.webp 1800w" sizes="(max-width: 1000px) 150vw, 1500px" width="1800" height="1064" alt="" aria-hidden="true" loading="lazy" decoding="async">
     <p class="gi-eyebrow">Coming soon</p>
     <h2 class="gi-join-h">The first light is coming.</h2>
-    <p class="gi-join-p">The first district is being placed. Sign-ups open soon.</p>
+    <p class="gi-join-p">Genesis Idle is in development for the web and Telegram.</p>
+    <span class="gi-soon">Coming soon</span>
   </div>
 </section>
 
@@ -258,18 +216,19 @@
   <div class="gi-footer-grid">
     <div class="gi-footer-brand">
       <a class="gi-brand" href="#top">
-        <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="#8b7bff" stroke-width="1" opacity="0.7"></circle><circle cx="17" cy="17" r="9" fill="none" stroke="#5ce1ff" stroke-width="1" opacity="0.5"></circle><circle cx="17" cy="17" r="3.2" fill="#ffcc7a"></circle></svg>
+        <img src="/assets/coin/gtp-coin-96.png" width="34" height="34" alt="">
         <span class="gi-brand-name">GENESIS IDLE</span>
       </a>
       <p>The only official address is genesisidle.com. Anything else is not us.</p>
+      <p>GTP is an in-game point with no monetary value.</p>
     </div>
     <nav aria-label="Site">
       <h2>Site</h2>
       <ul>
-        <li><a href="#story">Story</a></li>
-        <li><a href="#play">Try it</a></li>
+        <li><a href="#game">The game</a></li>
         <li><a href="#eras">Eras</a></li>
-        <li><a href="#ownership">Ownership</a></li>
+        <li><a href="#life">Island life</a></li>
+        <li><a href="#gtp">GTP</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
