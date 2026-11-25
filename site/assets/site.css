@@ -180,6 +180,14 @@ h1,h2,h3,p{margin:0}
 @keyframes gi-reveal{from{opacity:0;transform:translateY(48px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
 @supports not (animation-timeline: view()){.gi-reveal,.gi-sky-img{animation:none}}
 
+/* Large desktops and 4K at moderate scaling: a wider column */
+@media (min-width:1900px){
+  :root{--maxw:1560px}
+  .gi-hero{min-height:min(100svh,1000px)}
+  .gi-hero-copy{max-width:720px}
+  .gi-hero-lead{max-width:600px;font-size:21px}
+  .gi-step p,.gi-life p,.gi-era p{font-size:16px}
+}
 @media (max-width:1099px){
   .gi-life,.gi-eras{grid-template-columns:repeat(2,minmax(0,1fr))}
 }

@@ -38,7 +38,7 @@ You plant. You leave. You return, and find something larger than you left behind
 4. **Raise the core.** The level of the core sets your era. Reach the next one and every building on the island transforms.
 
 <p align="center">
-  <img src="docs/site-game.jpg" alt="The game section of the website, with an in-game screenshot of an Era II island" width="100%">
+  <img src="docs/site-game.jpg" alt="The game section of the website, with the game's opening screen" width="100%">
 </p>
 
 ### Four eras in season one
@@ -131,7 +131,7 @@ This repository holds the site at [genesisidle.com](https://genesisidle.com), ex
 ### How it is built
 
 - **No framework and no build step.** One HTML page, one stylesheet, one script.
-- **Fast.** Backgrounds are pre-rendered images in two sizes, images below the fold load lazily, and decorative animation pauses when it is off screen.
+- **Fast and sharp.** Backgrounds are pre-rendered images in sizes up to 4K, picked by the browser for the screen, images below the fold load lazily, and decorative animation pauses when it is off screen.
 - **Works on a phone.** One-row header with a menu panel; cards fall to two columns and then one on narrow screens.
 - **Keyboard and screen-reader friendly.** Skip link, visible focus, and text alternatives for every picture that carries meaning.
 - **Respects reduced motion.** With that system setting on, nothing loops, the coin is a still image, and nothing is hidden.
