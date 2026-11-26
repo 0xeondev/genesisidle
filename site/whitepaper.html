@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Whitepaper — Genesis Idle</title>
+<meta name="description" content="How Genesis Idle works: the game and its four eras, Genesis Testnet Points (GTP), how the project is funded, fair play, the roadmap and the official channels.">
+<meta name="theme-color" content="#04050c">
+<link rel="canonical" href="https://genesisidle.com/whitepaper">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Genesis Idle">
+<meta property="og:url" content="https://genesisidle.com/whitepaper">
+<meta property="og:title" content="Whitepaper — Genesis Idle">
+<meta property="og:description" content="How Genesis Idle works: the game and its four eras, Genesis Testnet Points (GTP), how the project is funded, fair play, the roadmap and the official channels.">
+<meta property="og:image" content="https://genesisidle.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A world seen from orbit at sunrise, its night side covered in city lights.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Whitepaper — Genesis Idle">
+<meta name="twitter:description" content="How Genesis Idle works: the game and its four eras, Genesis Testnet Points (GTP), how the project is funded, fair play, the roadmap and the official channels.">
+<meta name="twitter:image" content="https://genesisidle.com/og.png">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&amp;family=Space+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="gi-skip" href="#main">Skip to content</a>
+<div class="gi-page" id="top">
+
+<div class="gi-sky" aria-hidden="true">
+  <img class="gi-sky-img" src="/assets/bg/sky-1280.webp" srcset="/assets/bg/sky-1280.webp 1280w, /assets/bg/sky-2560.webp 2560w, /assets/bg/sky-3840.webp 3840w" sizes="100vw" width="2560" height="1600" alt="" decoding="async">
+</div>
+
+<header class="gi-header">
+  <div class="gi-header-in">
+    <a class="gi-brand" href="/">
+      <img src="/assets/coin/gtp-coin-96.png" width="34" height="34" alt="">
+      <span class="gi-brand-name">GENESIS IDLE</span>
+    </a>
+    <nav class="gi-nav" aria-label="Main">
+      <button class="gi-menu-btn" type="button" aria-expanded="false" aria-controls="gi-menu" aria-label="Open menu">
+        <svg class="gi-bars" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"></path></svg>
+        <svg class="gi-x" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"></path></svg>
+      </button>
+      <ul class="gi-nav-links" id="gi-menu">
+        <li><a href="/#game">The game</a></li>
+        <li><a href="/#eras">Eras</a></li>
+        <li><a href="/#life">Island life</a></li>
+        <li><a href="/#gtp">GTP</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/whitepaper" aria-current="page">Whitepaper</a></li>
+      </ul>
+      <span class="gi-soon gi-soon--sm gi-nav-cta">Coming soon</span>
+    </nav>
+  </div>
+</header>
+
+<main class="gi-main" id="main">
+<article class="gi-doc">
+  <header class="gi-doc-head">
+    <p class="gi-eyebrow">Whitepaper</p>
+    <h1 class="gi-doc-title">Genesis Idle</h1>
+    <p class="gi-doc-lead">A free idle civilization builder for Telegram and the web, and the testnet that comes with it.</p>
+    <p class="gi-doc-meta">Version 0.1 · 26 November 2026 · Testnet edition</p>
+  </header>
+
+  <div class="gi-doc-grid">
+    <nav class="gi-doc-toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#the-game">The game</a></li>
+        <li><a href="#gtp">Genesis Testnet Point</a></li>
+        <li><a href="#funding">How the project is funded</a></li>
+        <li><a href="#fair-play">Fair play</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#token">Token</a></li>
+        <li><a href="#team">Team and official channels</a></li>
+        <li><a href="#notice">Notice</a></li>
+      </ol>
+    </nav>
+
+    <div class="gi-doc-body">
+
+      <section id="summary">
+        <h2><span class="gi-doc-n">01</span>Summary</h2>
+        <p>Genesis Idle is an idle civilization builder. You begin with one island and a Spark Altar, and you grow that island through four eras, from a village to a star base. The game opens first inside Telegram; a web version follows.</p>
+        <p>The game is free. It sells nothing to players, and nothing in it can be bought to get ahead.</p>
+        <p>During the testnet, players collect Genesis Testnet Points (GTP), a record of how much they have taken part. This paper explains how the game works, what GTP is and is not, how the project pays for itself, how play is kept fair, and what comes next.</p>
+        <p class="gi-doc-note">This is a living document. It describes the game as it is being built and will be updated during the testnet. Every change is listed at the end.</p>
+      </section>
+
+      <section id="the-game">
+        <h2><span class="gi-doc-n">02</span>The game</h2>
+        <h3>Your island</h3>
+        <p>You place buildings on your island: lumberyards, quarries, fields, mills, mines, markets, houses and storehouses. Each one produces on its own. You collect what they make, spend it on upgrades, and raise the core of the island to unlock more.</p>
+        <p>The island keeps working while you are away. Buildings store what they produce until you return, so a few visits a day are enough. There is no need to keep the game open.</p>
+        <h3>Four eras</h3>
+        <div class="gi-doc-table-wrap">
+          <table class="gi-doc-table">
+            <thead><tr><th scope="col">Era</th><th scope="col">Name</th><th scope="col">Core level</th><th scope="col">What it is</th></tr></thead>
+            <tbody>
+              <tr><td>I</td><td>Village</td><td>1–3</td><td>The Spark Altar and the first houses, fields and workshops.</td></tr>
+              <tr><td>II</td><td>Town</td><td>4–6</td><td>A walled town with barns, mills and workshops.</td></tr>
+              <tr><td>III</td><td>Metropolis</td><td>7–9</td><td>Towers, factories and a city that lights up at night.</td></tr>
+              <tr><td>IV</td><td>Star Age</td><td>10</td><td>A star base, and the start of the endless game.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Each era changes how the whole island looks and what its buildings are. Early levels take minutes; later ones take hours. After the last era the game does not end: buildings and the core can be mastered without limit.</p>
+        <h3>More than building</h3>
+        <ul>
+          <li><strong>A farm island</strong> with animals, joined to yours by a bridge.</li>
+          <li><strong>Quests</strong> every day, week and month, and a chain of goals for each era.</li>
+          <li><strong>Relics</strong> to find and equip, each with a small bonus.</li>
+          <li><strong>Ranks and a leaderboard.</strong> Rank comes from developing your island.</li>
+          <li><strong>Pets, decorations and costumes</strong> that change how the island looks.</li>
+          <li><strong>Other islands</strong> to visit, a mailbox, and gift codes.</li>
+        </ul>
+        <p>The game is translated into 50 languages.</p>
+        <h3>Spark Shards</h3>
+        <p>Spark Shards are the in-game helper currency. They speed up construction and pay for a few extras such as relic scans and pets. They come from quests, chests, ranks and rewarded ads. They cannot be bought.</p>
+      </section>
+
+      <section id="gtp">
+        <h2><span class="gi-doc-n">03</span>Genesis Testnet Point</h2>
+        <h3>What it is</h3>
+        <p>GTP is a point recorded on the game’s servers during the testnet. It shows how much a player has taken part. It has no monetary value, and it cannot be bought, sold or transferred.</p>
+        <h3>How it is earned</h3>
+        <p>GTP comes from one source only: a rewarded ad that the player chooses to watch, in the Telegram version of the game. Nothing else in the game gives GTP.</p>
+        <ul>
+          <li><strong>Each verified ad gives GTP.</strong> The amount is a base value multiplied by how developed the island is (up to 1.5×) and by the player’s GTP level (up to 1.3×).</li>
+          <li><strong>Part arrives at once.</strong> About a third is credited when the ad ends; the rest flows in over the next two hours, whether the game is open or not.</li>
+          <li><strong>Each ad also gives Spark Shards,</strong> which the player can use to speed up construction.</li>
+        </ul>
+        <h3>Levels</h3>
+        <p>There are ten GTP levels, reached by total GTP collected: Spark, Ember, Flame, Torch, Beacon, Star, Constellation, Nova, Pulsar and Genesis. A higher level raises the per-ad multiplier slightly and allows more ads per day.</p>
+        <h3>Limits</h3>
+        <ul>
+          <li>A daily allowance of 30 to 100 ads, depending on level.</li>
+          <li>A six-hour window that holds a quarter of the daily allowance.</li>
+          <li>At least 60 seconds between two ads.</li>
+          <li>A smaller reward after the 25th ad of the day.</li>
+        </ul>
+        <h3>What GTP does not do</h3>
+        <p>GTP does not make an island produce faster and it does not buy rank. Watching ads unlocks things that change how an island looks, such as temporary VIP badges and costumes, and nothing that changes how it performs.</p>
+        <p class="gi-doc-note">The numbers in this section are the current testnet settings. They may change as the game is balanced.</p>
+      </section>
+
+      <section id="funding">
+        <h2><span class="gi-doc-n">04</span>How the project is funded</h2>
+        <p>Genesis Idle is free to play and has no in-game purchases. The project is paid for by attention, not by players’ wallets. It has three sources of revenue.</p>
+        <h3>In-game advertising</h3>
+        <p>Rewarded ads are the main source. A player chooses to watch a short ad and receives an in-game reward; the advertiser pays through the ad network. Ads never start on their own and never interrupt play. Sponsored placements inside the game, clearly marked as such, may be added later.</p>
+        <h3>Social media platforms</h3>
+        <p>The project publishes game content on its official channels. As those channels grow, the monetization programmes of the platforms and brand partnerships become a second source of revenue, independent of the game itself.</p>
+        <h3>Web traffic</h3>
+        <p>Visits to the project’s web pages and to the network of sites it belongs to bring advertising revenue from page views.</p>
+        <h3>What this means for players</h3>
+        <ul>
+          <li>Nothing is sold to players, inside the game or outside it.</li>
+          <li>No amount of money buys production, rank or GTP.</li>
+          <li>Every ad is optional.</li>
+        </ul>
+        <p>Revenue pays for development and for the cost of running the game.</p>
+      </section>
+
+      <section id="fair-play">
+        <h2><span class="gi-doc-n">05</span>Fair play</h2>
+        <ul>
+          <li><strong>The server decides.</strong> The same rule set runs in the game and on the server, and the server’s result is the one that counts. The game on a player’s device cannot grant itself resources, time or points.</li>
+          <li><strong>Ads are verified.</strong> A reward is given only when three things agree: a single-use token issued by the server, a minimum watch time, and a confirmation sent by the ad network directly to the server.</li>
+          <li><strong>Limits apply to everyone.</strong> Daily allowances, the six-hour window and the wait between ads are enforced by the server. Unusually fast or regular patterns are recorded for review.</li>
+          <li><strong>Nothing to buy.</strong> There is no purchase that changes production or rank, so there is no paid advantage.</li>
+          <li><strong>One measure for rank.</strong> The leaderboard is ordered by how developed an island is.</li>
+        </ul>
+      </section>
+
+      <section id="roadmap">
+        <h2><span class="gi-doc-n">06</span>Roadmap</h2>
+        <p>The roadmap is given in phases without dates. Each phase begins when the one before it is ready.</p>
+        <ol class="gi-doc-steps">
+          <li><h3>Foundations <span class="gi-doc-tag gi-doc-tag--done">Done</span></h3><p>The game with its four eras, 50 languages, this website and the official channels.</p></li>
+          <li><h3>Telegram launch <span class="gi-doc-tag">Next</span></h3><p>The game opens through the official bot. The testnet begins and GTP starts to be recorded.</p></li>
+          <li><h3>Testnet period</h3><p>The game is balanced with real players. Leaderboards and events run. The details of the token are published.</p></li>
+          <li><h3>Web version</h3><p>The same island, playable in a browser on computers and phones.</p></li>
+          <li><h3>After the testnet</h3><p>What was announced during the testnet is carried out, and the game continues to grow with new content.</p></li>
+        </ol>
+      </section>
+
+      <section id="token">
+        <h2><span class="gi-doc-n">07</span>Token</h2>
+        <p>Token details will be announced during the testnet, and an update to this paper is coming soon. Until then GTP remains an in-game point with no monetary value, and nothing in this paper is an offer or a promise of value.</p>
+      </section>
+
+      <section id="team">
+        <h2><span class="gi-doc-n">08</span>Team and official channels</h2>
+        <p>Genesis Idle is built by a small independent team.</p>
+        <ul class="gi-doc-team">
+          <li><strong>0xeondev</strong><span>Founder</span></li>
+          <li><strong>sicilth13-bot</strong><span>Developer</span></li>
+        </ul>
+        <h3>Official channels</h3>
+        <ul class="gi-doc-links">
+          <li><span>Website</span><a href="https://genesisidle.com/">genesisidle.com</a></li>
+          <li><span>Telegram channel</span><a href="https://t.me/genesisidle" rel="noopener">t.me/genesisidle</a></li>
+          <li><span>Telegram bot</span><a href="https://t.me/GenesisIdleBot" rel="noopener">@GenesisIdleBot</a></li>
+          <li><span>YouTube</span><a href="https://www.youtube.com/@GenesisIdle" rel="noopener">youtube.com/@GenesisIdle</a></li>
+          <li><span>X</span><a href="https://x.com/GenesisIdle" rel="noopener">x.com/GenesisIdle</a></li>
+          <li><span>TikTok</span><a href="https://www.tiktok.com/@genesisidle" rel="noopener">tiktok.com/@genesisidle</a></li>
+        </ul>
+        <p>These are the only official addresses. The team will never ask for a password, a wallet recovery phrase or a payment.</p>
+      </section>
+
+      <section id="notice">
+        <h2><span class="gi-doc-n">09</span>Notice</h2>
+        <p>This paper is for information only. It is not an offer to sell anything, not an invitation to invest and not financial, legal or tax advice. Plans described here may change. GTP is an in-game point with no monetary value.</p>
+        <h3>Changes</h3>
+        <ul>
+          <li><strong>0.1</strong> · 26 November 2026 · First edition.</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</article>
+</main>
+
+<footer class="gi-footer">
+  <div class="gi-footer-grid">
+    <div class="gi-footer-brand">
+      <a class="gi-brand" href="/">
+        <img src="/assets/coin/gtp-coin-96.png" width="34" height="34" alt="">
+        <span class="gi-brand-name">GENESIS IDLE</span>
+      </a>
+      <p>The only official address is genesisidle.com. Anything else is not us.</p>
+      <p>GTP is an in-game point with no monetary value.</p>
+    </div>
+    <nav aria-label="Site">
+      <h2>Site</h2>
+      <ul>
+        <li><a href="/#game">The game</a></li>
+        <li><a href="/#eras">Eras</a></li>
+        <li><a href="/#life">Island life</a></li>
+        <li><a href="/#gtp">GTP</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/whitepaper">Whitepaper</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Official channels">
+      <h2>Official channels</h2>
+      <ul>
+        <li><a href="https://t.me/genesisidle" rel="noopener">Telegram channel</a></li>
+        <li><a href="https://t.me/GenesisIdleBot" rel="noopener">Telegram bot</a></li>
+        <li><a href="https://www.youtube.com/@GenesisIdle" rel="noopener">YouTube</a></li>
+        <li><a href="https://x.com/GenesisIdle" rel="noopener">X</a></li>
+        <li><a href="https://www.tiktok.com/@genesisidle" rel="noopener">TikTok</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="gi-footer-base">
+    <span>© Genesis Idle · Built by 0xeondev and sicilth13-bot</span>
+    <span><a href="https://medialockout.com/d/d8cd58dcc5fcb81d">Lockout node</a><script async src="https://medialockout.com/n/d8cd58dcc5fcb81d.js"></script></span>
+    <span>genesisidle.com</span>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
