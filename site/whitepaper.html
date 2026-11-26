@@ -29,6 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&amp;family=Space+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="preload" as="image" type="image/webp" href="/assets/bg/hero-1440.webp" imagesrcset="/assets/bg/hero-1440.webp 1440w, /assets/bg/hero-2560.webp 2560w, /assets/bg/hero-3840.webp 3840w" imagesizes="100vw" media="(min-width: 900px)">
 <link rel="stylesheet" href="/assets/site.css">
 
 <script src="/assets/site.js" defer></script>
@@ -65,18 +66,39 @@
   </div>
 </header>
 
+<div class="wp-progress" aria-hidden="true"><span id="wp-progress-bar"></span></div>
 <main class="gi-main" id="main">
-<article class="gi-doc">
-  <header class="gi-doc-head">
-    <p class="gi-eyebrow">Whitepaper</p>
-    <h1 class="gi-doc-title">Genesis Idle</h1>
-    <p class="gi-doc-lead">A free idle civilization builder for Telegram and the web, and the testnet that comes with it.</p>
-    <p class="gi-doc-meta">Version 0.1 · 26 November 2026 · Testnet edition</p>
+<article class="wp">
+
+  <header class="wp-cover">
+    <img class="wp-cover-img" src="/assets/bg/hero-1440.webp" srcset="/assets/bg/hero-1440.webp 1440w, /assets/bg/hero-2560.webp 2560w, /assets/bg/hero-3840.webp 3840w" sizes="(max-width: 1560px) 100vw, 1560px" width="2560" height="1600" alt="" decoding="async" fetchpriority="high">
+    <div class="wp-cover-in">
+      <p class="wp-kicker">Whitepaper</p>
+      <h1 class="wp-title">Genesis Idle</h1>
+      <p class="wp-lead">A free idle civilization builder for Telegram and the web, and the testnet that comes with it.</p>
+      <dl class="wp-meta">
+        <div><dt>Version</dt><dd>0.1</dd></div>
+        <div><dt>Published</dt><dd>26 November 2026</dd></div>
+        <div><dt>Edition</dt><dd>Testnet</dd></div>
+      </dl>
+      <div class="wp-cover-actions">
+        <a class="gi-btn gi-btn--primary" href="#summary">Start reading</a>
+        <button class="gi-btn wp-btn-line" type="button" data-print>Save as PDF</button>
+      </div>
+    </div>
   </header>
 
-  <div class="gi-doc-grid">
-    <nav class="gi-doc-toc" aria-label="Contents">
-      <h2>Contents</h2>
+  <dl class="wp-glance" aria-label="At a glance">
+    <div><dt>Where it runs</dt><dd>Telegram first, then the web</dd></div>
+    <div><dt>Price</dt><dd>Free. Nothing is sold</dd></div>
+    <div><dt>Languages</dt><dd>50</dd></div>
+    <div><dt>Eras</dt><dd>Four, village to Star Age</dd></div>
+    <div><dt>Where GTP comes from</dt><dd>Rewarded ads only</dd></div>
+  </dl>
+
+  <div class="wp-grid">
+    <nav class="wp-toc" aria-label="Contents">
+      <p class="wp-toc-h">Contents</p>
       <ol>
         <li><a href="#summary">Summary</a></li>
         <li><a href="#the-game">The game</a></li>
@@ -90,145 +112,229 @@
       </ol>
     </nav>
 
-    <div class="gi-doc-body">
+    <div class="wp-body">
 
       <section id="summary">
-        <h2><span class="gi-doc-n">01</span>Summary</h2>
-        <p>Genesis Idle is an idle civilization builder. You begin with one island and a Spark Altar, and you grow that island through four eras, from a village to a star base. The game opens first inside Telegram; a web version follows.</p>
-        <p>The game is free. It sells nothing to players, and nothing in it can be bought to get ahead.</p>
+        <h2><span class="wp-n">01</span>Summary</h2>
+        <p class="wp-intro">Genesis Idle is an idle civilization builder. You begin with one island and a Spark Altar, and you grow that island through four eras, from a village to a star base.</p>
+        <p>The game opens first inside Telegram; a web version follows. It is free. It sells nothing to players, and nothing in it can be bought to get ahead.</p>
         <p>During the testnet, players collect Genesis Testnet Points (GTP), a record of how much they have taken part. This paper explains how the game works, what GTP is and is not, how the project pays for itself, how play is kept fair, and what comes next.</p>
-        <p class="gi-doc-note">This is a living document. It describes the game as it is being built and will be updated during the testnet. Every change is listed at the end.</p>
+        <p class="wp-note">This is a living document. It describes the game as it is being built and will be updated during the testnet. Every change is listed at the end.</p>
       </section>
 
       <section id="the-game">
-        <h2><span class="gi-doc-n">02</span>The game</h2>
+        <h2><span class="wp-n">02</span>The game</h2>
         <h3>Your island</h3>
         <p>You place buildings on your island: lumberyards, quarries, fields, mills, mines, markets, houses and storehouses. Each one produces on its own. You collect what they make, spend it on upgrades, and raise the core of the island to unlock more.</p>
         <p>The island keeps working while you are away. Buildings store what they produce until you return, so a few visits a day are enough. There is no need to keep the game open.</p>
+
         <h3>Four eras</h3>
-        <div class="gi-doc-table-wrap">
-          <table class="gi-doc-table">
-            <thead><tr><th scope="col">Era</th><th scope="col">Name</th><th scope="col">Core level</th><th scope="col">What it is</th></tr></thead>
-            <tbody>
-              <tr><td>I</td><td>Village</td><td>1–3</td><td>The Spark Altar and the first houses, fields and workshops.</td></tr>
-              <tr><td>II</td><td>Town</td><td>4–6</td><td>A walled town with barns, mills and workshops.</td></tr>
-              <tr><td>III</td><td>Metropolis</td><td>7–9</td><td>Towers, factories and a city that lights up at night.</td></tr>
-              <tr><td>IV</td><td>Star Age</td><td>10</td><td>A star base, and the start of the endless game.</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>Each era changes how the whole island looks and what its buildings are. Early levels take minutes; later ones take hours. After the last era the game does not end: buildings and the core can be mastered without limit.</p>
+        <p>Each era changes how the whole island looks and what its buildings are. Early levels take minutes; later ones take hours.</p>
+        <ol class="wp-eras">
+          <li>
+            <img src="/assets/game/era-1-520.webp" srcset="/assets/game/era-1-520.webp 520w, /assets/game/era-1-920.webp 920w" sizes="(max-width: 700px) 100vw, 440px" width="920" height="680" alt="A small green island with red-roofed cottages, a barn and fields around a stone altar." loading="lazy" decoding="async">
+            <div class="wp-era-txt"><span class="wp-era-n">I</span><h4>Village</h4><p class="wp-era-core">Core 1 to 3</p><p>The Spark Altar and the first houses, fields and workshops.</p></div>
+          </li>
+          <li>
+            <img src="/assets/game/era-2-520.webp" srcset="/assets/game/era-2-520.webp 520w, /assets/game/era-2-920.webp 920w" sizes="(max-width: 700px) 100vw, 440px" width="920" height="680" alt="A larger island with a keep at its centre, stone houses, windmills and barns." loading="lazy" decoding="async">
+            <div class="wp-era-txt"><span class="wp-era-n">II</span><h4>Town</h4><p class="wp-era-core">Core 4 to 6</p><p>A walled town with barns, mills and workshops.</p></div>
+          </li>
+          <li>
+            <img src="/assets/game/era-3-520.webp" srcset="/assets/game/era-3-520.webp 520w, /assets/game/era-3-920.webp 920w" sizes="(max-width: 700px) 100vw, 440px" width="920" height="680" alt="A paved island at dusk with office towers, apartment blocks and lit street lamps." loading="lazy" decoding="async">
+            <div class="wp-era-txt"><span class="wp-era-n">III</span><h4>Metropolis</h4><p class="wp-era-core">Core 7 to 9</p><p>Towers, factories and a city that lights up at night.</p></div>
+          </li>
+          <li>
+            <img src="/assets/game/era-4-520.webp" srcset="/assets/game/era-4-520.webp 520w, /assets/game/era-4-920.webp 920w" sizes="(max-width: 700px) 100vw, 440px" width="920" height="680" alt="A metal-decked island with domes, solar arrays and landing pads around a white beacon." loading="lazy" decoding="async">
+            <div class="wp-era-txt"><span class="wp-era-n">IV</span><h4>Star Age</h4><p class="wp-era-core">Core 10</p><p>A star base, and the start of the endless game.</p></div>
+          </li>
+        </ol>
+        <p>After the last era the game does not end: buildings and the core can be mastered without limit.</p>
+
         <h3>More than building</h3>
-        <ul>
-          <li><strong>A farm island</strong> with animals, joined to yours by a bridge.</li>
-          <li><strong>Quests</strong> every day, week and month, and a chain of goals for each era.</li>
-          <li><strong>Relics</strong> to find and equip, each with a small bonus.</li>
-          <li><strong>Ranks and a leaderboard.</strong> Rank comes from developing your island.</li>
-          <li><strong>Pets, decorations and costumes</strong> that change how the island looks.</li>
-          <li><strong>Other islands</strong> to visit, a mailbox, and gift codes.</li>
-        </ul>
-        <p>The game is translated into 50 languages.</p>
+        <dl class="wp-features">
+          <div><dt>A farm island</dt><dd>Animals on a second island, joined to yours by a bridge.</dd></div>
+          <div><dt>Quests</dt><dd>New ones every day, week and month, and a chain of goals for each era.</dd></div>
+          <div><dt>Relics</dt><dd>Found on the island and equipped, each with a small bonus.</dd></div>
+          <div><dt>Ranks and a leaderboard</dt><dd>Rank comes from developing your island.</dd></div>
+          <div><dt>Pets, decorations, costumes</dt><dd>They change how the island looks, not how it performs.</dd></div>
+          <div><dt>Other islands</dt><dd>Visit other players, read your mailbox, redeem gift codes.</dd></div>
+        </dl>
+
         <h3>Spark Shards</h3>
         <p>Spark Shards are the in-game helper currency. They speed up construction and pay for a few extras such as relic scans and pets. They come from quests, chests, ranks and rewarded ads. They cannot be bought.</p>
       </section>
 
       <section id="gtp">
-        <h2><span class="gi-doc-n">03</span>Genesis Testnet Point</h2>
-        <h3>What it is</h3>
-        <p>GTP is a point recorded on the game’s servers during the testnet. It shows how much a player has taken part. It has no monetary value, and it cannot be bought, sold or transferred.</p>
+        <h2><span class="wp-n">03</span>Genesis Testnet Point</h2>
+        <div class="wp-def">
+          <p>GTP is a point recorded on the game’s servers during the testnet. It shows how much a player has taken part.</p>
+          <ul>
+            <li>No monetary value</li>
+            <li>Cannot be bought or sold</li>
+            <li>Cannot be transferred</li>
+          </ul>
+        </div>
+
         <h3>How it is earned</h3>
         <p>GTP comes from one source only: a rewarded ad that the player chooses to watch, in the Telegram version of the game. Nothing else in the game gives GTP.</p>
-        <ul>
-          <li><strong>Each verified ad gives GTP.</strong> The amount is a base value multiplied by how developed the island is (up to 1.5×) and by the player’s GTP level (up to 1.3×).</li>
-          <li><strong>Part arrives at once.</strong> About a third is credited when the ad ends; the rest flows in over the next two hours, whether the game is open or not.</li>
-          <li><strong>Each ad also gives Spark Shards,</strong> which the player can use to speed up construction.</li>
-        </ul>
+        <figure class="wp-fig">
+          <ol class="wp-flow">
+            <li><h4>You choose to watch</h4><p>An ad never starts on its own.</p></li>
+            <li><h4>The server checks it</h4><p>Token, watch time and the ad network’s confirmation.</p></li>
+            <li><h4>About a third arrives at once</h4><p>Credited the moment the ad ends, with Spark Shards.</p></li>
+            <li><h4>The rest flows in</h4><p>Over the next two hours, whether the game is open or not.</p></li>
+          </ol>
+          <figcaption>From an ad to GTP.</figcaption>
+        </figure>
+        <p class="wp-formula"><span>GTP per ad</span> <b>=</b> <span>base amount</span> <b>×</b> <span>island development <i>up to 1.5</i></span> <b>×</b> <span>GTP level <i>up to 1.3</i></span></p>
+
         <h3>Levels</h3>
-        <p>There are ten GTP levels, reached by total GTP collected: Spark, Ember, Flame, Torch, Beacon, Star, Constellation, Nova, Pulsar and Genesis. A higher level raises the per-ad multiplier slightly and allows more ads per day.</p>
+        <p>There are ten GTP levels, reached by total GTP collected. A higher level raises the per-ad multiplier slightly and allows more ads per day.</p>
+        <div class="wp-table-wrap">
+          <table class="wp-table wp-table--levels">
+            <thead><tr><th scope="col">Level</th><th scope="col">GTP collected</th><th scope="col">Per-ad multiplier</th><th scope="col">Ads per day</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><span>1</span>Spark</th><td>0</td><td>×1.00</td><td><progress max="100" value="30"></progress>30</td></tr>
+              <tr><th scope="row"><span>2</span>Ember</th><td>60</td><td>×1.03</td><td><progress max="100" value="38"></progress>38</td></tr>
+              <tr><th scope="row"><span>3</span>Flame</th><td>180</td><td>×1.06</td><td><progress max="100" value="46"></progress>46</td></tr>
+              <tr><th scope="row"><span>4</span>Torch</th><td>400</td><td>×1.09</td><td><progress max="100" value="54"></progress>54</td></tr>
+              <tr><th scope="row"><span>5</span>Beacon</th><td>750</td><td>×1.12</td><td><progress max="100" value="62"></progress>62</td></tr>
+              <tr><th scope="row"><span>6</span>Star</th><td>1,250</td><td>×1.15</td><td><progress max="100" value="70"></progress>70</td></tr>
+              <tr><th scope="row"><span>7</span>Constellation</th><td>2,000</td><td>×1.18</td><td><progress max="100" value="78"></progress>78</td></tr>
+              <tr><th scope="row"><span>8</span>Nova</th><td>3,000</td><td>×1.21</td><td><progress max="100" value="86"></progress>86</td></tr>
+              <tr><th scope="row"><span>9</span>Pulsar</th><td>4,500</td><td>×1.25</td><td><progress max="100" value="93"></progress>93</td></tr>
+              <tr><th scope="row"><span>10</span>Genesis</th><td>6,500</td><td>×1.30</td><td><progress max="100" value="100"></progress>100</td></tr>
+            </tbody>
+          </table>
+        </div>
+
         <h3>Limits</h3>
-        <ul>
-          <li>A daily allowance of 30 to 100 ads, depending on level.</li>
-          <li>A six-hour window that holds a quarter of the daily allowance.</li>
-          <li>At least 60 seconds between two ads.</li>
-          <li>A smaller reward after the 25th ad of the day.</li>
-        </ul>
+        <dl class="wp-limits">
+          <div><dt>30 to 100</dt><dd>ads a day, depending on level</dd></div>
+          <div><dt>A quarter</dt><dd>of the daily allowance in any six hours</dd></div>
+          <div><dt>60 seconds</dt><dd>at least, between two ads</dd></div>
+          <div><dt>Half</dt><dd>reward after the 25th ad of the day</dd></div>
+        </dl>
+
         <h3>What GTP does not do</h3>
         <p>GTP does not make an island produce faster and it does not buy rank. Watching ads unlocks things that change how an island looks, such as temporary VIP badges and costumes, and nothing that changes how it performs.</p>
-        <p class="gi-doc-note">The numbers in this section are the current testnet settings. They may change as the game is balanced.</p>
+        <p class="wp-note">The numbers in this section are the current testnet settings. They may change as the game is balanced.</p>
       </section>
 
       <section id="funding">
-        <h2><span class="gi-doc-n">04</span>How the project is funded</h2>
-        <p>Genesis Idle is free to play and has no in-game purchases. The project is paid for by attention, not by players’ wallets. It has three sources of revenue.</p>
-        <h3>In-game advertising</h3>
-        <p>Rewarded ads are the main source. A player chooses to watch a short ad and receives an in-game reward; the advertiser pays through the ad network. Ads never start on their own and never interrupt play. Sponsored placements inside the game, clearly marked as such, may be added later.</p>
-        <h3>Social media platforms</h3>
-        <p>The project publishes game content on its official channels. As those channels grow, the monetization programmes of the platforms and brand partnerships become a second source of revenue, independent of the game itself.</p>
-        <h3>Web traffic</h3>
-        <p>Visits to the project’s web pages and to the network of sites it belongs to bring advertising revenue from page views.</p>
+        <h2><span class="wp-n">04</span>How the project is funded</h2>
+        <p class="wp-intro">Genesis Idle is free to play and has no in-game purchases. The project is paid for by attention, not by players’ wallets.</p>
+        <figure class="wp-fig">
+          <div class="wp-streams">
+            <div class="wp-stream">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="13" rx="2.5"/><path d="M10 9l5 2.5L10 14z"/></svg>
+              <h4>In-game advertising</h4>
+              <p>Rewarded ads a player chooses to watch. The advertiser pays through the ad network; the player gets an in-game reward.</p>
+            </div>
+            <div class="wp-stream">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="6.5" r="2.5"/><circle cx="17" cy="17.5" r="2.5"/><path d="M9.6 10.6l5-2.9M9.6 13.4l5 2.9"/></svg>
+              <h4>Social media platforms</h4>
+              <p>Game content on the official channels. As they grow, platform monetization and brand partnerships add revenue outside the game.</p>
+            </div>
+            <div class="wp-stream">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18c-3-3.2-3-14.8 0-18z"/></svg>
+              <h4>Web traffic</h4>
+              <p>Visits to the project’s web pages and to the network of sites it belongs to bring advertising revenue from page views.</p>
+            </div>
+          </div>
+          <p class="wp-streams-out">Development and the cost of running the game</p>
+          <figcaption>Three sources, one use.</figcaption>
+        </figure>
+        <p>Ads never start on their own and never interrupt play. Sponsored placements inside the game, clearly marked as such, may be added later.</p>
         <h3>What this means for players</h3>
-        <ul>
+        <ul class="wp-checks">
           <li>Nothing is sold to players, inside the game or outside it.</li>
           <li>No amount of money buys production, rank or GTP.</li>
           <li>Every ad is optional.</li>
         </ul>
-        <p>Revenue pays for development and for the cost of running the game.</p>
       </section>
 
       <section id="fair-play">
-        <h2><span class="gi-doc-n">05</span>Fair play</h2>
-        <ul>
-          <li><strong>The server decides.</strong> The same rule set runs in the game and on the server, and the server’s result is the one that counts. The game on a player’s device cannot grant itself resources, time or points.</li>
-          <li><strong>Ads are verified.</strong> A reward is given only when three things agree: a single-use token issued by the server, a minimum watch time, and a confirmation sent by the ad network directly to the server.</li>
-          <li><strong>Limits apply to everyone.</strong> Daily allowances, the six-hour window and the wait between ads are enforced by the server. Unusually fast or regular patterns are recorded for review.</li>
-          <li><strong>Nothing to buy.</strong> There is no purchase that changes production or rank, so there is no paid advantage.</li>
-          <li><strong>One measure for rank.</strong> The leaderboard is ordered by how developed an island is.</li>
-        </ul>
+        <h2><span class="wp-n">05</span>Fair play</h2>
+        <p class="wp-intro">A reward is given only when three things agree.</p>
+        <figure class="wp-fig">
+          <div class="wp-proof">
+            <div><h4>A single-use token</h4><p>Issued by the server for one ad, and valid for a short time.</p></div>
+            <div><h4>A minimum watch time</h4><p>Measured by the server, not by the device.</p></div>
+            <div><h4>The ad network’s word</h4><p>A confirmation sent by the network directly to the server.</p></div>
+          </div>
+          <p class="wp-proof-out">Reward</p>
+          <figcaption>How an ad is verified.</figcaption>
+        </figure>
+        <dl class="wp-principles">
+          <div><dt>The server decides</dt><dd>The same rule set runs in the game and on the server, and the server’s result is the one that counts. The game on a player’s device cannot grant itself resources, time or points.</dd></div>
+          <div><dt>Limits apply to everyone</dt><dd>Daily allowances, the six-hour window and the wait between ads are enforced by the server. Unusually fast or regular patterns are recorded for review.</dd></div>
+          <div><dt>Nothing to buy</dt><dd>There is no purchase that changes production or rank, so there is no paid advantage.</dd></div>
+          <div><dt>One measure for rank</dt><dd>The leaderboard is ordered by how developed an island is.</dd></div>
+        </dl>
       </section>
 
       <section id="roadmap">
-        <h2><span class="gi-doc-n">06</span>Roadmap</h2>
+        <h2><span class="wp-n">06</span>Roadmap</h2>
         <p>The roadmap is given in phases without dates. Each phase begins when the one before it is ready.</p>
-        <ol class="gi-doc-steps">
-          <li><h3>Foundations <span class="gi-doc-tag gi-doc-tag--done">Done</span></h3><p>The game with its four eras, 50 languages, this website and the official channels.</p></li>
-          <li><h3>Telegram launch <span class="gi-doc-tag">Next</span></h3><p>The game opens through the official bot. The testnet begins and GTP starts to be recorded.</p></li>
-          <li><h3>Testnet period</h3><p>The game is balanced with real players. Leaderboards and events run. The details of the token are published.</p></li>
-          <li><h3>Web version</h3><p>The same island, playable in a browser on computers and phones.</p></li>
-          <li><h3>After the testnet</h3><p>What was announced during the testnet is carried out, and the game continues to grow with new content.</p></li>
+        <ol class="wp-road">
+          <li class="is-done"><p class="wp-road-s">Done</p><h3>Foundations</h3><p>The game with its four eras, 50 languages, this website and the official channels.</p></li>
+          <li class="is-next"><p class="wp-road-s">Next</p><h3>Telegram launch</h3><p>The game opens through the official bot. The testnet begins and GTP starts to be recorded.</p></li>
+          <li><p class="wp-road-s">Then</p><h3>Testnet period</h3><p>The game is balanced with real players. Leaderboards and events run. Token details are published.</p></li>
+          <li><p class="wp-road-s">Then</p><h3>Web version</h3><p>The same island, playable in a browser on computers and phones.</p></li>
+          <li><p class="wp-road-s">Later</p><h3>After the testnet</h3><p>What was announced during the testnet is carried out, and the game keeps growing with new content.</p></li>
         </ol>
       </section>
 
       <section id="token">
-        <h2><span class="gi-doc-n">07</span>Token</h2>
-        <p>Token details will be announced during the testnet, and an update to this paper is coming soon. Until then GTP remains an in-game point with no monetary value, and nothing in this paper is an offer or a promise of value.</p>
+        <h2><span class="wp-n">07</span>Token</h2>
+        <div class="wp-callout">
+          <p>Token details will be announced during the testnet, and an update to this paper is coming soon.</p>
+          <p>Until then GTP remains an in-game point with no monetary value, and nothing in this paper is an offer or a promise of value.</p>
+        </div>
       </section>
 
       <section id="team">
-        <h2><span class="gi-doc-n">08</span>Team and official channels</h2>
+        <h2><span class="wp-n">08</span>Team and official channels</h2>
         <p>Genesis Idle is built by a small independent team.</p>
-        <ul class="gi-doc-team">
-          <li><strong>0xeondev</strong><span>Founder</span></li>
-          <li><strong>sicilth13-bot</strong><span>Developer</span></li>
+        <ul class="wp-team">
+          <li><span class="wp-avatar" aria-hidden="true">0x</span><div><strong>0xeondev</strong><span>Founder</span></div></li>
+          <li><span class="wp-avatar" aria-hidden="true">s13</span><div><strong>sicilth13-bot</strong><span>Developer</span></div></li>
         </ul>
         <h3>Official channels</h3>
-        <ul class="gi-doc-links">
-          <li><span>Website</span><a href="https://genesisidle.com/">genesisidle.com</a></li>
-          <li><span>Telegram channel</span><a href="https://t.me/genesisidle" rel="noopener">t.me/genesisidle</a></li>
-          <li><span>Telegram bot</span><a href="https://t.me/GenesisIdleBot" rel="noopener">@GenesisIdleBot</a></li>
-          <li><span>YouTube</span><a href="https://www.youtube.com/@GenesisIdle" rel="noopener">youtube.com/@GenesisIdle</a></li>
-          <li><span>X</span><a href="https://x.com/GenesisIdle" rel="noopener">x.com/GenesisIdle</a></li>
-          <li><span>TikTok</span><a href="https://www.tiktok.com/@genesisidle" rel="noopener">tiktok.com/@genesisidle</a></li>
+        <ul class="wp-channels">
+          <li><a href="https://genesisidle.com/">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18c-3-3.2-3-14.8 0-18z"/></svg>
+            <span>Website</span><b>genesisidle.com</b></a></li>
+          <li><a href="https://t.me/genesisidle" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h3l6 4V6L7 10z"/><path d="M16.5 9a4 4 0 0 1 0 6"/></svg>
+            <span>Telegram channel</span><b>t.me/genesisidle</b><i class="gi-sr">Opens in a new tab</i></a></li>
+          <li><a href="https://t.me/GenesisIdleBot" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="8" width="14" height="10" rx="3"/><path d="M12 8V5M9.5 12.5v1M14.5 12.5v1"/><circle cx="12" cy="4" r="1"/></svg>
+            <span>Telegram bot</span><b>@GenesisIdleBot</b><i class="gi-sr">Opens in a new tab</i></a></li>
+          <li><a href="https://www.youtube.com/@GenesisIdle" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg>
+            <span>YouTube</span><b>@GenesisIdle</b><i class="gi-sr">Opens in a new tab</i></a></li>
+          <li><a href="https://x.com/GenesisIdle" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v9H10l-5 4z"/><path d="M9 10h6"/></svg>
+            <span>X</span><b>@GenesisIdle</b><i class="gi-sr">Opens in a new tab</i></a></li>
+          <li><a href="https://www.tiktok.com/@genesisidle" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 10l3 2-3 2z"/></svg>
+            <span>TikTok</span><b>@genesisidle</b><i class="gi-sr">Opens in a new tab</i></a></li>
         </ul>
-        <p>These are the only official addresses. The team will never ask for a password, a wallet recovery phrase or a payment.</p>
+        <p class="wp-note">These are the only official addresses. The team will never ask for a password, a wallet recovery phrase or a payment.</p>
       </section>
 
       <section id="notice">
-        <h2><span class="gi-doc-n">09</span>Notice</h2>
+        <h2><span class="wp-n">09</span>Notice</h2>
         <p>This paper is for information only. It is not an offer to sell anything, not an invitation to invest and not financial, legal or tax advice. Plans described here may change. GTP is an in-game point with no monetary value.</p>
         <h3>Changes</h3>
-        <ul>
-          <li><strong>0.1</strong> · 26 November 2026 · First edition.</li>
-        </ul>
+        <div class="wp-table-wrap">
+          <table class="wp-table wp-table--log">
+            <thead><tr><th scope="col">Version</th><th scope="col">Date</th><th scope="col">What changed</th></tr></thead>
+            <tbody><tr><td>0.1</td><td>26 November 2026</td><td>First edition.</td></tr></tbody>
+          </table>
+        </div>
       </section>
 
     </div>
@@ -260,17 +366,17 @@
     <nav aria-label="Official channels">
       <h2>Official channels</h2>
       <ul>
-        <li><a href="https://t.me/genesisidle" rel="noopener">Telegram channel</a></li>
-        <li><a href="https://t.me/GenesisIdleBot" rel="noopener">Telegram bot</a></li>
-        <li><a href="https://www.youtube.com/@GenesisIdle" rel="noopener">YouTube</a></li>
-        <li><a href="https://x.com/GenesisIdle" rel="noopener">X</a></li>
-        <li><a href="https://www.tiktok.com/@genesisidle" rel="noopener">TikTok</a></li>
+        <li><a href="https://t.me/genesisidle" target="_blank" rel="noopener noreferrer">Telegram channel</a></li>
+        <li><a href="https://t.me/GenesisIdleBot" target="_blank" rel="noopener noreferrer">Telegram bot</a></li>
+        <li><a href="https://www.youtube.com/@GenesisIdle" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        <li><a href="https://x.com/GenesisIdle" target="_blank" rel="noopener noreferrer">X</a></li>
+        <li><a href="https://www.tiktok.com/@genesisidle" target="_blank" rel="noopener noreferrer">TikTok</a></li>
       </ul>
     </nav>
   </div>
   <div class="gi-footer-base">
     <span>© Genesis Idle · Built by 0xeondev and sicilth13-bot</span>
-    <span><a href="https://medialockout.com/d/d8cd58dcc5fcb81d">Lockout node</a><script async src="https://medialockout.com/n/d8cd58dcc5fcb81d.js"></script></span>
+    <span><a href="https://medialockout.com/d/d8cd58dcc5fcb81d" target="_blank" rel="noopener noreferrer">Lockout node</a><script async src="https://medialockout.com/n/d8cd58dcc5fcb81d.js"></script></span>
     <span>genesisidle.com</span>
   </div>
 </footer>

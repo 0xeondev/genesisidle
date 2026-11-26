@@ -109,10 +109,45 @@
   }
 
 
+  /* ---------------- Whitepaper: contents highlight, reading progress, print ---------------- */
+  function initPaper() {
+    var toc = $('.wp-toc');
+    if (!toc) { return; }
+    var links = $$('a[href^="#"]', toc);
+    var byId = {};
+    links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) { return; }
+          links.forEach(function (a) { a.removeAttribute('aria-current'); });
+          var link = byId[en.target.id];
+          if (link) { link.setAttribute('aria-current', 'true'); }
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+      Object.keys(byId).forEach(function (id) { var s = doc.getElementById(id); if (s) { io.observe(s); } });
+    }
+    var bar = $('#wp-progress-bar');
+    var body = $('.wp-body');
+    if (bar && body) {
+      var onScroll = function () {
+        var r = body.getBoundingClientRect();
+        var total = r.height - window.innerHeight * 0.5;
+        var done = Math.min(Math.max(-r.top + window.innerHeight * 0.5, 0), total);
+        bar.style.width = (total > 0 ? (done / total) * 100 : 0).toFixed(1) + '%';
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    }
+    $$('[data-print]').forEach(function (b) { b.addEventListener('click', function () { window.print(); }); });
+  }
+
   function init() {
     initHeader();
     initLights();
     initPausing();
+    initPaper();
   }
 
   if (doc.readyState === 'loading') { doc.addEventListener('DOMContentLoaded', init); } else { init(); }
