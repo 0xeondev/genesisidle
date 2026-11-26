@@ -459,16 +459,19 @@ h1,h2,h3,p{margin:0}
   .wp-table tbody th span{width:22px}
   .wp-def,.wp-callout{padding:22px}
 }
+@page{margin:0}
 @media print{
-  :root{--bg:#fff;--bg-raised:#fff;--panel:#fff;--well:#fff;--ink:#111;--ink-2:#2a2a2a;--ink-3:#555;--amber:#8a5a00;--cyan:#005f73;--line:#bbb;--line-soft:#ddd;--line-strong:#888}
-  body{background:#fff;color:#111}
+  /* the printed paper: warm cream stock, deep-space navy ink */
+  :root{--bg:#f3ead9;--bg-raised:#f8f1e3;--panel:#f8f1e3;--well:#f8f2e5;--ink:#141a3a;--ink-2:#2b3156;--ink-3:#5c6184;--amber:#96600a;--cyan:#0f6e82;--line:rgba(20,26,58,.26);--line-soft:rgba(20,26,58,.13);--line-strong:rgba(20,26,58,.5)}
+  html,body{background:#f3ead9;color:#141a3a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .gi-sky,.gi-header,.gi-footer,.wp-toc,.wp-progress,.wp-cover-actions,.gi-skip{display:none !important}
-  .wp{max-width:none;padding:0}
-  .wp-cover{min-height:0;border:0;border-bottom:2px solid #111;border-radius:0;background:#fff}
+  /* the page has no margin so the cream runs to the edge; the article carries the margin on every sheet */
+  .wp{max-width:none;padding:15mm 14mm;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .wp-cover{min-height:0;border:0;border-bottom:2px solid #141a3a;border-radius:0;background:transparent}
   .wp-cover-img,.wp-cover::after{display:none}
   .wp-cover-in{padding:0 0 18pt}
   .wp-title{font-size:44pt;text-shadow:none}
-  .wp-lead{color:#111}
+  .wp-lead{color:#141a3a}
   .wp-glance{border-radius:0;border-left:0;border-right:0}
   .wp-grid{display:block;padding-top:24pt}
   .wp-body{font-size:10.5pt;line-height:1.5}
@@ -476,10 +479,13 @@ h1,h2,h3,p{margin:0}
   .wp-body h2{break-after:avoid;font-size:17pt}
   .wp-body h3{break-after:avoid;margin-top:16pt}
   .wp-fig,.wp-eras li,.wp-table-wrap,.wp-def,.wp-callout,.wp-limits div,.wp-team li,.wp-channels li{break-inside:avoid}
-  .wp-def,.wp-streams-out,.wp-proof-out,.wp-note{background:#fff}
-  .wp-flow li::before{background:#fff;border:1px solid #111;color:#111}
-  .wp-channels a::after{content:" " attr(href);grid-column:1 / -1;font-size:8pt;color:#555}
-  a{color:#111}
+  .wp-def{background:#f8f1e3}
+  .wp-streams-out,.wp-proof-out,.wp-note{background:rgba(150,96,10,.09)}
+  .wp-stream,.wp-proof > div{background:#fbf6ea}
+  .wp-proof > div + div::before{background:#f8f2e5}
+  .wp-flow li::before{background:#96600a;color:#fbf6ea}
+  .wp-channels a::after{content:" " attr(href);grid-column:1 / -1;font-size:8pt;color:#5c6184}
+  a{color:#141a3a}
   /* a printed page is narrow enough to trigger the phone layout; restore the columns */
   .wp-glance{grid-template-columns:repeat(5,minmax(0,1fr))}
   .wp-glance div,.wp-glance div:nth-child(n){grid-column:auto;padding:10pt 8pt;border-top:0;border-left:1px solid var(--line-soft)}
